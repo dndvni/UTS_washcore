@@ -13,12 +13,13 @@ class TipeSepatuSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('t_tipe_sepatu')->insert([
+        $data= [
             ['tipe_sepatu_id' => 1, 'nama_tipe' => 'Sneakers'],
             ['tipe_sepatu_id' => 2, 'nama_tipe' => 'Running Shoes'],
             ['tipe_sepatu_id' => 3, 'nama_tipe' => 'Loafers'],
             ['tipe_sepatu_id' => 4, 'name_tipe' => 'Hiking Boots'],
             ['tipe_sepatu_id' => 5, 'nama_tipe' => 'Football Shoes'],
-        ]);
+        ];
+        DB::table('t_tipe_sepatu')->insert($data);
     }
 }

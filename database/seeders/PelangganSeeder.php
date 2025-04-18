@@ -13,7 +13,7 @@ class PelangganSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('t_pelanggan')->insert([
+        $data= [
             [
                 'pelanggan_id'   => 1,
                 'nama_pelanggan' => 'Michelle Dorani',
@@ -62,6 +62,7 @@ class PelangganSeeder extends Seeder
                 'created_at'     => now(),
                 'updated_at'     => now(), 
             ],
-        ]);
+        ];
+        DB::table('t_pegawai')->insert($data);
     }
 }

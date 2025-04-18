@@ -13,7 +13,7 @@ class TransaksiSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('t_transaksi')->insert([
+        $data= [
             [
                 'pegawai_id' => 1,
                 'pelanggan_id' => 1,
@@ -80,6 +80,7 @@ class TransaksiSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-        ]);
+        ];
+        DB::table('t_transaksi')->insert($data);
     }
 }

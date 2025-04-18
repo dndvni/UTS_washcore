@@ -13,7 +13,7 @@ class PelayananSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('t_pelayanan')->insert([
+        $data= [
             [
                 'pelayanan_id' => 1,
                 'jenis_pelayanan' => 'Deep Clean',
@@ -49,6 +49,7 @@ class PelayananSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-        ]);
+        ];
+        DB::table('t_pelayanan')->insert($data);
     }
 }

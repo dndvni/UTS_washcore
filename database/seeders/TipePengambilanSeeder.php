@@ -13,10 +13,11 @@ class TipePengambilanSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('t_tipe_pengambilan')->insert([
+        $data= [
             ['pengambilan_id' => 1, 'nama_tipe_ambil' => 'Antar'],
             ['pengambilan_id' => 2, 'nama_tipe_ambil' => 'Ambil'],
             ['pengambilan_id' => 3, 'nama_tipe_ambil' => 'COD'],
-        ]);
+        ];
+        DB::table('t_tipe_pengambilan')->insert($data);
     }
 }
